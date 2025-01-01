@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+@layer components {
+  .menu-icon {
+    @apply text-gray-700 text-xl;
+  }
+  .menu-sibgle {
+    @apply flex items-center gap-2 p-2.5 rounded-lg hover:bg-slateprimary ;
+  }
+  .menu-sibgle p {
+    @apply text-sm;
+  }
+  
+  .menu-multi {
+    @apply flex items-center justify-between gap-2 p-2.5 hover:bg-slateprimary rounded-lg cursor-pointer;
+  }
+  .menu-multi-child {
+    @apply bg-gray-50 overflow-hidden transition-all duration-200 rounded-lg;
+  }
+
+  .menu-multi-child ul {
+    @apply flex flex-col gap-2 px-4 py-2 mt-2 ;
+  }
+  .menu-multi-child ul li p{
+    @apply text-sm;
+  }
+
+  .menu-multi-child ul li {
+    @apply flex items-center py-1;
+  }
+
+  .menu-multi .arrow {
+    @apply  text-lg transition-all duration-200;
+  }
+  .menu-multi .title {
+    @apply flex items-center gap-2;
+  }
+  /* .menu-multi .title p{
+    @apply text-gray-700;
+  } */
+
+  .no-arrow summary {
+    @apply list-none;
+  }
+}
