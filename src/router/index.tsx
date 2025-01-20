@@ -5,6 +5,7 @@ import ButtonPage from "../views/pages/ui/button";
 import StarterPage from "../views/pages/page/starter";
 import CardPage from "../views/pages/ui/card";
 import ToastPage from "../views/pages/ui/toast";
+import TablePage from "../views/pages/table";
 
 
 const RouteApp: React.FC = () => {
@@ -24,6 +25,7 @@ const RouteApp: React.FC = () => {
       <Route path="/button" element={<ButtonPage />} />
       <Route path="/card" element={<CardPage />} />
       <Route path="/toast" element={<ToastPage />} />
+      <Route path="/table" element={<TablePage />} />
       {/* end ui routes */}
     </Routes>
   )

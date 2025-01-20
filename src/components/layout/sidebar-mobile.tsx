@@ -9,7 +9,7 @@ const SidebarMobile = ({isMobile, isOpenDropdown, menuName, handleOpenDropdown, 
   console.log(isSidebarOpen, isMobile)
   return (
     <>
-      <div className={`${isSidebarOpen && isMobile ? 'w-[95%]' : 'w-[0px]'} h-[100vh] overflow-hidden bg-white fixed z-10 transition-all duration-300`}>
+      <div className={`${isSidebarOpen && isMobile ? 'w-[100%]' : 'w-[0px]'} h-[100vh] overflow-hidden bg-white fixed z-10 transition-all duration-300`}>
         <div className='p-5 mb-3 flex justify-between items-end'>
           {
             isSidebarOpen
@@ -34,6 +34,7 @@ const SidebarMobile = ({isMobile, isOpenDropdown, menuName, handleOpenDropdown, 
                       handleToogle={() => handleOpenDropdown(menu.label)}
                       isOpenDropdown={ menu.label === menuName && isOpenDropdown ? true : false}
                       isActive={menu.label === menuName ? true : false}
+                      clickChild={() => setIsSidebarOpen(!isSidebarOpen)}
                     />
                     // <div></div>
                   )

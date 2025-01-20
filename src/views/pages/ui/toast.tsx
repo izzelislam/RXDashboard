@@ -23,7 +23,7 @@ const ToastPage = () => {
         breadCrumbs={breadCrumbs}
       >
 
-        <div className='flex gap-4'>
+        <div className='flex flex-wrap gap-4'>
           <Button
             title='Show Toast Success'
             color={ButtonColor.success}

@@ -53,7 +53,7 @@ const menus: Menu[] = [
       },
       {
         label: 'Tabel',
-        path: '/kamar-add'
+        path: '/table'
       },
       {
         label: 'Toast',

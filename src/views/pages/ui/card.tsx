@@ -23,7 +23,7 @@ const CardPage = () => {
       transParantBg
     >
 
-      <div className='flex gap-4'>
+      <div className='flex flex-wrap gap-4'>
         <div>
           <div className='mb-4'>
             <p className='font-semibold text-gray-500'>Card with header</p>

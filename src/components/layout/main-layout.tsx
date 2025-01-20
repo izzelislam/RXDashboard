@@ -51,7 +51,7 @@ const MainLayout: React.FC<Props> = ({children} : Props) => {
   }
 
   return (
-    <section className='p-6 bg-backround'>
+    <section className='md:p-6 bg-backround'>
       <div className='flex bg-backround box-border'>
         
         {/* sidebar */}
@@ -64,7 +64,7 @@ const MainLayout: React.FC<Props> = ({children} : Props) => {
 
         <div className='bg-backround relative min-h-screen flex-1 dark:bg-gray-900'>
           {/* navbar */}
-          <div className='sticky top-6 left-0 right-0 flex justify-between items-center bg-white w-full h-[80px] px-6 dark:bg-gray-950 rounded-lg'>
+          <div className='sticky top-0 md:top-6 left-0 right-0 flex justify-between items-center bg-white w-full h-[80px] px-6 dark:bg-gray-950 rounded-lg'>
             <div className='lg:hidden'>
               {
                 isSidebarOpen
@@ -76,7 +76,7 @@ const MainLayout: React.FC<Props> = ({children} : Props) => {
               <p className='text-gray-700'>Selamat datang <span className='text-primary font-semibold'>Balhaqi Nukman Tamam!</span></p>
             </div>
             <div className='flex items-center gap-2'>
-              <div className='mr-3'>
+              <div className='hidden md:inline-block mr-3'>
                 <label className="swap swap-rotate">
                   {/* this hidden checkbox controls the state */}
                   <input onChange={(e) => handleSwitchTheme(e)} type="checkbox" className="theme-controller" value="synthwave" />
@@ -111,6 +111,12 @@ const MainLayout: React.FC<Props> = ({children} : Props) => {
                 </summary>
                 <ul className="menu dropdown-content bg-base-100 rounded-box z-[1] w-52 p-2 shadow">
                   <li>
+                  <div className='inline-block md:hidden'>
+                    <p className='text-gray-500 text-xs'>admin</p>
+                    <p className='text-gray-500 text-sm font-semibold'>JohnCena@mail.com</p>
+                  </div>
+                  </li>
+                  <li>
                     <Link to={"/"} className='flex items-center gap-2'>
                       <Icon icon="solar:home-2-bold-duotone" className='text-xl' />
                       Dashboard
@@ -130,7 +136,7 @@ const MainLayout: React.FC<Props> = ({children} : Props) => {
                   </li>
                 </ul>
               </details>
-              <div className='flex flex-col items-start'>
+              <div className='hidden md:flex flex-col items-start'>
                 <p className='text-gray-500 text-xs'>admin</p>
                 <p className='text-gray-500 text-sm font-semibold'>JohnCena@mail.com</p>
               </div>
@@ -139,7 +145,7 @@ const MainLayout: React.FC<Props> = ({children} : Props) => {
           {/* end navbar */}
 
           {/* content */}
-          <div className='py-6 overflow-auto'>
+          <div className='p-4 md:py-6 overflow-auto'>
             {children}
           </div>
           {/* end content */}

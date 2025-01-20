@@ -9,9 +9,10 @@ type Props = {
   handleToogle: () => void
   isOpenDropdown: boolean
   isActive?: boolean
+  clickChild: () => void
 }
 
-const MenuMultiple:React.FC<Props> = ({label, icon, children, handleToogle, isOpenDropdown, isActive}: Props) => {
+const MenuMultiple:React.FC<Props> = ({label, icon, children, handleToogle, isOpenDropdown, isActive, clickChild}: Props) => {
 
 
   return (
@@ -27,7 +28,7 @@ const MenuMultiple:React.FC<Props> = ({label, icon, children, handleToogle, isOp
       <div className={`menu-multi-child ${isOpenDropdown ? 'max-h-auto opacity-100' : 'h-0 opacity-0 ' }`}>
           <ul>
             {children.map((child: any, index: number) => (
-              <Link to={child.path}>
+              <Link to={child.path} onClick={clickChild}>
                 <li key={index} className='group/child'>
                   <Icon icon="lucide:dot" className='group-hover/child:text-primary text-xl' />
                   <p className='group-hover/child:text-primary'>{child.label}</p>

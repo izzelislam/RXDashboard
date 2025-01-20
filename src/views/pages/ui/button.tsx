@@ -36,7 +36,7 @@ const ButtonPage = () => {
 
         <div className='my-4'>
           <p>Button Variant</p>
-          <div className='flex gap-2'>
+          <div className='flex flex-wrap gap-2'>
             <Button
               title="danger"
               onClick={() => console.log('Button')}
@@ -83,7 +83,7 @@ const ButtonPage = () => {
 
         <div className='my-4'>
           <p>Button border Variant</p>
-          <div className='flex gap-2'>
+          <div className='flex flex-wrap gap-2'>
             <Button
               title="rounded full"
               onClick={() => console.log('Button')}
@@ -120,7 +120,7 @@ const ButtonPage = () => {
 
         <div className='my-4'>
           <p>Button Variant outlined</p>
-          <div className='flex gap-2'>
+          <div className='flex flex-wrap gap-2'>
             <Button
               title="danger"
               onClick={() => console.log('Button')}
@@ -162,7 +162,7 @@ const ButtonPage = () => {
 
         <div className='my-4'>
           <p>Button Variant with icon</p>
-          <div className='flex gap-2'>
+          <div className='flex flex-wrap gap-2'>
             <Button
               title="danger"
               onClick={() => console.log('Button')}
@@ -204,7 +204,7 @@ const ButtonPage = () => {
 
         <div className='my-4'>
           <p>Button icon only</p>
-          <div className='flex gap-2'>
+          <div className='flex flex-wrap gap-2'>
             <Button
               onClick={() => console.log('Button')}
               color={ButtonColor.danger}
